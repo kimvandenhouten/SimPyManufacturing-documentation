@@ -71,6 +71,7 @@ Creating a production plan
 --------------------------
 
 Now we can used the defined factory, and products to make a production plan using the :class:`~ProductionPlan` object. This entails a set of products that should be produced in the factory, including the deadlines.
+
 .. code-block:: python
    
    from classes.classes import ProductionPlan
