@@ -69,8 +69,17 @@ This newly defined product can now be added to the products that can be produced
   
 Creating a production plan
 --------------------------
+
+Now we can used the defined factory, and products to make a production plan using the :class:`~ProductionPlan` object. This entails a set of products that should be produced in the factory, including the deadlines.
 .. code-block:: python
    
    from classes.classes import ProductionPlan
    productionplan = ProductionPlan(ID=0, SIZE=10, NAME="ProductionPlanJanuary", FACTORY="my_factory",
                                    PRODUCT_IDS=[0, 0, 0], DEADLINES=[70, 100, 120])
+   productionplan.list_products()
+ 
+The user can also define the sequence in which the products will be prioritized in processing:
+
+.. code-block:: python
+   
+   productionplan.set_sequence(sequence=[2, 0, 1])
