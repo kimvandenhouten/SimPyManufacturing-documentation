@@ -21,7 +21,7 @@ To install the requirements:
 Creating a factory
 ----------------
 
-To generate a simulation tool for a certain factory, you can use the :py:func:`Factory object.
+To generate a simulation tool for a certain factory, you can use the :py:func:`Factory' object.
 
 For example
 >>> from classes.classes import Factory
