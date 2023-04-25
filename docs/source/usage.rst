@@ -34,7 +34,7 @@ For example
 Creating a product
 ----------------
 
-To generate a simulation tool for a certain factory, you can use the :class:`~Factory` object.
+To generate a product that can be produced in your factory you can use the :class:`~Product` object.
 
 For example
 
