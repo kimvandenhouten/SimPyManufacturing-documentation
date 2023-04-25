@@ -59,12 +59,12 @@ Then you will need to define the activities that are needed to make your product
    # Set temporal relations, in this case meaning that activity 1 requests 
    # resources 10 minutes after start of activity 0.
    product.add_temporal_relations(TEMPORAL_RELATIONS={(0, 1): 10}
-   # Add product to factory
 
 This newly defined product can now be added to the products that can be produced in your factory.
 
 .. code-block:: python
 
+   # Add product to factory
    my_factory.add_product(product=product)
   
 Creating a production plan
