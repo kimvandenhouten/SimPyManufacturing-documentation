@@ -84,3 +84,6 @@ The user can also define the sequence in which the products will be prioritized 
 .. code-block:: python
    
    productionplan.set_sequence(sequence=[2, 0, 1])
+   
+Run a simulation model
+----------------------
