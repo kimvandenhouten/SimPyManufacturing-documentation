@@ -24,6 +24,7 @@ Creating a factory
 To generate a simulation tool for a certain factory, you can use the :class:`~Factory` object.
 
 For example
+
 .. code-block:: python
-from classes.classes import Factory
-my_factory = Factory(name="MyFactory", resource_names=["Filter", "Mixer"], capacity=[2, 3])
+   from classes.classes import Factory
+   my_factory = Factory(name="MyFactory", resource_names=["Filter", "Mixer"], capacity=[2, 3])
