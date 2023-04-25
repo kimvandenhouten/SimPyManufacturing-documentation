@@ -6,29 +6,23 @@ Usage
 Installation
 ------------
 
-To use Lumache, first install it using pip:
+To use SimPyManufacturing, first install it using pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   (.venv) $ pip install SimPyManufacturing
+   
+To install the requirements:
 
-Creating recipes
+.. code-block:: console
+
+   (.venv) $ pip install -r requirements.txt
+
+Creating a factory
 ----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+To generate a simulation tool for a certain factory, you can use the :py:func:`Factory object.
 
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
-
+For example
+>>> from classes.classes import Factory
+>>> my_factory = Factory(name="MyFactory", resource_names=["Filter", "Mixer"], capacity=[2, 3])
