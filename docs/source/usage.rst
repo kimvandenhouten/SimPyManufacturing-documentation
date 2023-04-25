@@ -49,12 +49,15 @@ Then you will need to define the activities that are needed to make your product
 
    from classes.classes import Activity
    # Make the activites
-   activity0 = Activity(ID=0, PROCESSING_TIME=10, PRODUCT="Enzyme_1", PRODUCT_ID="0", NEEDS=[1, 0])
-   activity1 = Activity(ID=1, PROCESSING_TIME=20, PRODUCT="Enzyme_1", PRODUCT_ID="0", NEEDS=[0, 1])
+   activity0 = Activity(ID=0, PROCESSING_TIME=10, PRODUCT="Enzyme_1", 
+                        PRODUCT_ID="0", NEEDS=[1, 0])
+   activity1 = Activity(ID=1, PROCESSING_TIME=20, PRODUCT="Enzyme_1", 
+                        PRODUCT_ID="0", NEEDS=[0, 1])
    # Add the activities to the product
    product.add_activity(activity=activity0)
    product.add_activity(activity=activity1)
-   # Set temporal relations, in this case meaning that activity 1 requests resources 10 minutes after start of activity 0.
+   # Set temporal relations, in this case meaning that activity 1 requests 
+   # resources 10 minutes after start of activity 0.
    product.add_temporal_relations(TEMPORAL_RELATIONS={(0, 1): 10}
    # Add product to factory
 
@@ -63,3 +66,11 @@ This newly defined product can now be added to the products that can be produced
 .. code-block:: python
 
    my_factory.add_product(product=product)
+  
+Creating a production plan
+--------------------------
+.. code-block:: python
+   
+   from classes.classes import ProductionPlan
+   productionplan = ProductionPlan(ID=0, SIZE=10, NAME="ProductionPlanJanuary", FACTORY="my_factory",
+                                   PRODUCT_IDS=[0, 0, 0], DEADLINES=[70, 100, 120])
