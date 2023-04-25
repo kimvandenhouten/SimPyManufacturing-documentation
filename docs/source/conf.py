@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'SimPyManufacturing'
+copyright = '2023, Kim van den Houten'
+author = 'Kim van den Houten'
 
 release = '0.1'
 version = '0.1.0'
