@@ -97,6 +97,6 @@ Now we are all set to run a simulation model. Our library comprises different va
    my_simulator.simulate(SIM_TIME=1000, RANDOM_SEED=1)
    
  
-To run this example, use Example.py. 
+To run this example, use example.py. 
 
 
