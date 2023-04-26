@@ -87,3 +87,4 @@ The user can also define the sequence in which the products will be prioritized 
    
 Run a simulation model
 ----------------------
+Now we are all set to run a simulation model. Our library comprises different variants of the simulation model, and more variants could be added. We now showcase for "simulator_3". This simulation model reflects a system that starts assumes that each product has one starting activity (0), after which a set of downstream processes start. The resources required for activity 0 will first be requested, and once the product retrieves the resources for activity 0, it starts requesting the machines for downstream processing, although when set by the user with a certain time lag (this can be set using the temporal relations). 
