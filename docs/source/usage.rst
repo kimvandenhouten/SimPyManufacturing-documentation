@@ -75,16 +75,23 @@ Now we can used the defined factory, and products to make a production plan usin
 .. code-block:: python
    
    from classes.classes import ProductionPlan
-   productionplan = ProductionPlan(ID=0, SIZE=10, NAME="ProductionPlanJanuary", FACTORY="my_factory",
+   my_productionplan = ProductionPlan(ID=0, SIZE=10, NAME="ProductionPlanJanuary", FACTORY="my_factory",
                                    PRODUCT_IDS=[0, 0, 0], DEADLINES=[70, 100, 120])
-   productionplan.list_products()
+   my_productionplan.list_products()
  
 The user can also define the sequence in which the products will be prioritized in processing:
 
 .. code-block:: python
    
-   productionplan.set_sequence(sequence=[2, 0, 1])
+   my_productionplan.set_sequence(sequence=[2, 0, 1])
    
 Run a simulation model
 ----------------------
 Now we are all set to run a simulation model. Our library comprises different variants of the simulation model, and more variants could be added. We now showcase for "simulator_3". This simulation model reflects a system that assumes that each product has one starting activity (0), after which a set of downstream processes start. The resources required for activity 0 will first be requested, and once the product retrieves the resources for activity 0, it starts requesting the machines for downstream processing. When the requests for downstream processing should be delayed a bit more, the user can a priori set a temporal relation. 
+
+
+.. code-block:: python
+   
+   from classes.simulator_3 import Simulator
+   
+   simulator = Simulator(plan=my_productionplan)
